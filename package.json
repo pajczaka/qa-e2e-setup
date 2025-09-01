@@ -1,0 +1,23 @@
+{
+  "name": "e2e-cypress-playwright-ts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test:e2e": "npm run test:e2e:playwright && npm run test:e2e:cypress",
+    "test:e2e:playwright": "playwright test",
+    "test:e2e:playwright:ui": "playwright test --ui",
+    "test:e2e:cypress": "cypress run --browser chrome --headless",
+    "test:e2e:cypress:open": "cypress open",
+    "prepare": "playwright install chromium",
+    "lint": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "cypress": "^13.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
